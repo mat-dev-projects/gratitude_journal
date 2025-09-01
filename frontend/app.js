@@ -2,11 +2,16 @@ async function addEntry() {
   const text = document.getElementById("gratitudeText").value;
   if (!text) return alert("Please write something!");
 
-  const res = await fetch("/api/entry_add", {
+  const res = await fetch("/api/entry/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text })
-  });
+ })
+  .then(res => res.json())
+  .then(data => {
+  alert("Saved entry!");
+})
+ .catch(err => console.error(err));;
   const data = await res.json();
   alert(data.message);
 }

@@ -2,7 +2,7 @@ async function addEntry() {
   const text = document.getElementById("gratitudeText").value;
   if (!text) return alert("Please write something!");
 
-  const res = await fetch("/api/entry/add", {
+  const res = await fetch("/api/entry_add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text })

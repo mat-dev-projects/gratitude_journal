@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gratitude Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🌸 My Gratitude Journal</h1>
+
+  <button id="loginBtn">Sign in</button>
+  <button id="logoutBtn" style="display:none;">Sign out</button>
+
+  <div id="app" style="display:none;">
+    <h2>Add Today’s Gratitude</h2>
+    <textarea id="gratitudeText" maxlength="500"></textarea><br>
+    <button onclick="addEntry()">Save Entry</button>
+
+    <h2>See a Random Past Gratitude</h2>
+    <button onclick="getRandomEntry()">Show Random</button>
+    <p id="randomEntry"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
